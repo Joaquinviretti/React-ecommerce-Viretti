@@ -5,7 +5,7 @@ import CartWidget from "../CartWidget/CartWidget"
 import "./NavBar.scss"
 
 const NavBar = () =>
-    <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" fixed="top">
         <Container fluid="xxl">
             <Navbar.Brand href="#home">Watch World</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -5,7 +5,7 @@ import './CartWidget.scss'
 const CartWidget = () =>
     <IconContext.Provider value={{size:"1.3em"}}>
         <div className="cartWidgetContainer">
-            <MdShoppingCart /> <span>0 items</span>
+            <MdShoppingCart /><span>0 items</span>
         </div>
     </IconContext.Provider>
 
