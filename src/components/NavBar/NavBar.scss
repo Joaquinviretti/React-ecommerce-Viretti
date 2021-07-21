@@ -1,0 +1,11 @@
+.navbar-toggler {
+    border: none!important;
+    &:focus {
+        box-shadow: none!important;
+    }
+}
+
+.navLinkCart {
+   padding: 0!important;
+   margin: 0!important;
+}
