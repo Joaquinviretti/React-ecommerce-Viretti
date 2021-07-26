@@ -1,0 +1,28 @@
+.itemCountContainer {
+    display: flex;
+    flex-direction: column;
+
+    .itemCountControls {
+        display: flex;
+
+        .countDisplay {
+            background-color: white;
+            width: 150px;
+            margin: 0 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            .count {
+                text-align: center;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .itemCount__button--add {
+        margin-top: 1em;
+    }
+}
+
+
+
