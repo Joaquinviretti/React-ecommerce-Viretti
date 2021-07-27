@@ -20,6 +20,14 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         }
     }
 
+    const addToCart = () => {
+           if(stock > 0){
+            onAdd(counter) 
+           } else {
+               alert('No tenemos stock')
+           }
+    }
+
     return (
         <div className="itemCountContainer">
             <div className="itemCountControls">
@@ -29,7 +37,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                 </div>
                 <Button onClick={sumar}>+</Button>
             </div>
-            <Button className="itemCount__button--add" onClick={onAdd}>Agregar al carrito</Button>
+            <Button className="itemCount__button--add" onClick={addToCart}>Agregar al carrito</Button>
         </div>
     )
 }
