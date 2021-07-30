@@ -32,3 +32,16 @@ nav {
     }
 
 }
+
+@media (max-width:500px){
+
+    nav {
+        padding: 0 0.5em;
+    }
+
+    .nav__links {
+        a {
+            display: none;
+        }
+    }
+}

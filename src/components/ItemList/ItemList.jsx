@@ -5,7 +5,7 @@ import "./itemList.scss"
 const ItemList = ({products}) => {
 
     return (
-        <Row className="item-list gx-5 gy-4">
+        <Row className="item-list gy-4">
             
             <Item products={products}></Item>
             
