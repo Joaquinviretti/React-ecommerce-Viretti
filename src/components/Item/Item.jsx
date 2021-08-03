@@ -12,7 +12,7 @@ const Item = ({ products }) => {
         <>
             {
                 products.map(p =>
-                    <Col sm={6} md={4} lg={4} xxl={3}> 
+                    <Col key={p.id} sm={6} md={4} lg={4} xxl={3}> 
                         <div className="itemContainer">
                             <div className="itemContainer__image" style={{ backgroundImage: "url(zapatilla.jpg)" }}></div>
                             <div className="itemContainer__info">
