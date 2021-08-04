@@ -12,7 +12,13 @@ const ItemDetailContainer = () => {
 
         const promise = new Promise((resolve, reject) => {
 
-            const producto = { id: 1, title: 'Xiaomi MiBand', description: 'great smartwatch', price: 1250, pictureUrl: 'zapatilla.jpg' }
+            const producto =   {
+                "id": 1,
+                "title": "Apple Watch Series 3",
+                "description": "Apple Watch Series 3 con altímetro integrado, coaching inteligente, una app Frecuencia Cardiaca más poderosa y un procesador más potente. Además, siempre tendrás tus playlists favoritas en la muñeca. Es el dispositivo perfecto para que estés más activo, motivado y conectado que nunca.",
+                "price": 47999,
+                "pictureUrl": "apple-watch-series3.png"
+              }
 
             setTimeout(() => {
                 resolve(producto)
