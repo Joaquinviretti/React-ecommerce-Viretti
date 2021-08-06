@@ -9,6 +9,11 @@
     justify-content: space-between;
     max-width: 300px;
     margin: 0 auto;
+    color: black;
+    text-decoration: none;
+    &:hover {
+        background-color: rgb(243, 243, 243);
+    }
 
 
     .itemContainer__info{

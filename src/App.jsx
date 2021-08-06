@@ -1,15 +1,18 @@
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import NavBar from "./components/NavBar/NavBar"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
-import "./base/global.scss"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
+import "./style/main.scss"
 
-let nombre = "Emanuel"
 
-const App = () => 
-<>
-    <NavBar/>
-    <ItemListContainer nombre={nombre}/>
-    <ItemDetailContainer />
-</>
+const App = () =>
+    <BrowserRouter>
+        <NavBar />
+        <Switch>
+            <Route exact path="/" component={ItemListContainer} />
+            <Route path="/category/:id" component={ItemListContainer} />
+            <Route path="/item/:id" component={ItemDetailContainer} />
+        </Switch>
+    </BrowserRouter>
 
 export default App
