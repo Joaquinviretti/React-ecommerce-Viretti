@@ -8,7 +8,7 @@ const ItemDetail = ({item}) => {
     }
 
     return(
-        <div className="itemDetailContainer">
+        <div className="itemDetail">
             <div className="detail-img">
                 <img src={item.pictureUrl} alt="" />
             </div>

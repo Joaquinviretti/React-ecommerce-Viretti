@@ -10,26 +10,26 @@ const productos = data
 const ItemDetailContainer = () => {
 
     const [item, setItem] = useState([])
-    const { id } = useParams();
+    const { id } = useParams()
 
     useEffect(() => {
 
         const promise = new Promise((resolve, reject) => {
 
             setTimeout(() => {
-                console.log(id);
                 // eslint-disable-next-line eqeqeq
                 resolve(productos.filter(e => e.id == id))
-            });
+            }, 2000);
 
-        },[])
+        })
 
         promise.then((producto) => setItem(producto))
+        
 
     });
 
     return (
-        <Container>
+        <Container className="mt-5 itemDetailContainer">
             <ItemDetail item={item} />
         </Container>
     )
