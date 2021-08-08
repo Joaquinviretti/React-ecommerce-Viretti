@@ -4,14 +4,15 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import "./style/main.scss"
 
-
 const App = () =>
     <BrowserRouter>
         <NavBar />
         <Switch>
             <Route exact path="/" component={ItemListContainer} />
             <Route path="/category/:id" component={ItemListContainer} />
-            <Route path="/item/:id" component={ItemDetailContainer} />
+            <Route path="/item/:id">
+                <ItemDetailContainer />
+            </Route>
         </Switch>
     </BrowserRouter>
 

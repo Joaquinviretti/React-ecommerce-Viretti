@@ -7,17 +7,22 @@ const ItemDetail = ({item}) => {
         console.log(`se han agregado ${cantidad} producto/s al carrito`)
     }
 
+    const formatMoney = (num) => {
+        if(num) {
+            return "$ " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+        }
+    }
+
     return(
         <div className="itemDetail">
-            <div className="detail-img">
-                <img src={item.pictureUrl} alt="" />
+            <div className="detail-img"  style={{ backgroundImage: `url(/${item.pictureUrl})`}}>  
             </div>
             <div className="detail-info">
                 <h2>{item.title}</h2>
                 <p>{item.description}</p>
-                <h4>{item.price}</h4>
+                <h4>{formatMoney(item.price)}</h4>
                 <ItemCount initial={1} stock={5} onAdd={onAdd} />
-            </div>
+            </div>    
         </div>
     )
 }

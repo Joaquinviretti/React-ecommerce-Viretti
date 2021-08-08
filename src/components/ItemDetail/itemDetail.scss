@@ -1,7 +1,5 @@
 .itemDetail {
-
     width: 100%;
-    margin-bottom: 3rem;
     border-radius: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;;
     display: grid;
@@ -9,6 +7,11 @@
 
     .detail-img {
         grid-area: img;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
         img {
             width: 100%;
         }

@@ -4,7 +4,7 @@ import ItemList from "../ItemList/ItemList"
 import "./ItemListContainer.scss"
 import Container from "react-bootstrap/Container"
 import { useParams } from "react-router-dom"
-import data from "../../data/data.json"
+import data from "../../data/data"
 
 const productos = data;
 
