@@ -2,7 +2,7 @@
 
 <br>
 
-Se obtiene la información desde el archivo data.js. El sitio permite filtrar por categorías. 
+Se obtiene la información desde el archivo data.js. De esta manera el código queda más limpio. El sitio permite filtrar por categorías. 
 
 Si se hace click en el nombre de un producto, el sitio redirige al usuario al detalle del mismo.
 
