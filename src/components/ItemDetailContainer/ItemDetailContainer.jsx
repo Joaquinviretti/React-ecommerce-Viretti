@@ -4,12 +4,14 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 import "./itemDetailContainer.scss"
 import { useParams } from "react-router-dom"
 import data from "../../data/data"
+import Spinner from "react-bootstrap/Spinner"
 
 const productos = data
 
 const ItemDetailContainer = () => {
 
     const [item, setItem] = useState([])
+    const [loading, setLoading] = useState(false)
     const { id } = useParams()
 
     useEffect(() => {
@@ -19,18 +21,22 @@ const ItemDetailContainer = () => {
             setTimeout(() => {
                 // eslint-disable-next-line eqeqeq
                 resolve(productos.find(e => e.id == id))
-            },1000);
+                setLoading(true)
+            }, 2000);
 
         })
 
         promise.then((producto) => setItem(producto))
-        
 
-    },[item,id]);
+
+    }, [item, id]);
 
     return (
         <Container className="itemDetailContainer">
-            <ItemDetail item={item} />
+            {loading ? <ItemDetail item={item} /> :
+                <Spinner animation="border" role="status" variant="secondary">
+                    <span className="visually-hidden">Loading...</span>
+                </Spinner>}
         </Container>
     )
 }

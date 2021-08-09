@@ -11,6 +11,7 @@ const productos = data;
 const ItemListContainer = () => {
 
   const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(false)
   const { id } = useParams()
 
 
@@ -19,7 +20,7 @@ const ItemListContainer = () => {
     promise.then(json => { setProducts(json) })
 
     //eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id])
+  }, [id, products])
 
   const getItems = () => {
 
@@ -31,15 +32,16 @@ const ItemListContainer = () => {
         } else {
           resolve(productos)
         }
-      })
+        setLoading(true)
+      }, 1000)
     })
 
     return promise
   }
 
   return (
-    <Container className="mt-5">
-      <ItemList products={products} />
+    <Container className="mt-5 itemListContainer">
+      <ItemList products={products} loading={loading} />
     </Container>
   )
 }

@@ -22,6 +22,10 @@ nav {
         width: auto;
         .nav__link {
             margin-right: 1em;
+            color: #999999;
+        }
+        .nav__link--selected {
+            color: rgb(255, 255, 255);
         }
     }
 

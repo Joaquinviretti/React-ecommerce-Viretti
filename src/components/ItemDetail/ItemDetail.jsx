@@ -15,7 +15,8 @@ const ItemDetail = ({item}) => {
 
     return(
         <div className="itemDetail">
-            <div className="detail-img"  style={{ backgroundImage: `url(/${item.pictureUrl})`}}>  
+            <div className="detail-img__container">  
+            <div className="detail-img" style={{ backgroundImage: `url(/${item.pictureUrl})`}}></div>
             </div>
             <div className="detail-info">
                 <h2>{item.title}</h2>
