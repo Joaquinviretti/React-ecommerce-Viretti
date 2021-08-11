@@ -33,7 +33,7 @@ const ItemListContainer = () => {
           resolve(productos)
         }
         setLoading(true)
-      }, 3000)
+      }, 4000)
     })
 
     return promise
