@@ -20,11 +20,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     }
 
     const addToCart = () => {
-           if(stock > 0){
             onAdd(counter) 
-           } else {
-               alert('No tenemos stock')
-           }
     }
 
     return (

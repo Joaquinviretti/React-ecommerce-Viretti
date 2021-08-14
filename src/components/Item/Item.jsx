@@ -5,8 +5,8 @@ import { Link } from "react-router-dom"
 
 const Item = ({ products }) => {
 
-    const onAdd = (cantidad) => {
-        console.log(`se han agregado ${cantidad} producto/s al carrito`)
+    const onAdd = () => {
+
     }
 
     const formatMoney = (num) => {

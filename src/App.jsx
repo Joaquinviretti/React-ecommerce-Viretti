@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar/NavBar"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import Footer from "./components/Footer/Footer"
-import {CustomProvider} from "./content/cartContext"
+import {CustomProvider} from "./context/cartContext"
 import "./style/main.scss"
 
 const App = () =>

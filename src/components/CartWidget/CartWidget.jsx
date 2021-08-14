@@ -2,7 +2,7 @@ import { MdShoppingCart } from 'react-icons/md';
 import { IconContext } from "react-icons";
 import { useContext, useEffect, useState } from 'react';
 import './CartWidget.scss'
-import cartContext from '../../content/cartContext';
+import cartContext from '../../context/cartContext';
 
 const CartWidget = () => {
 
