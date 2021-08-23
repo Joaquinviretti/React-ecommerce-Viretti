@@ -1,3 +1,9 @@
 .itemListContainer {
     padding-bottom: 200px;
+    .spinner {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        z-index: 5;
+    }
 }

@@ -1,11 +1,17 @@
 .cartWidgetContainer {
-    width: 7.5rem;
-    padding: 0 1em;
     height: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #ccd0d0;
-    border-radius: 30px;
-    color: #2d2d2d;
+    .cartWidget {
+        width: auto;
+        padding: 0 1em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #ccd0d0;
+        border-radius: 30px;
+        color: #2d2d2d;
+        span {
+            margin-left: 10px;
+        }
+    }
 }

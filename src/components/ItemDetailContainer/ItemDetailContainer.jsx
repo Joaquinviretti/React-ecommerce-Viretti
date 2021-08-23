@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
                 // eslint-disable-next-line eqeqeq
                 resolve(productos.find(e => e.id == id))
                 setLoading(true)
-            }, 4000);
+            }, 1000)
 
         })
 

@@ -11,29 +11,25 @@ const productos = data;
 const ItemListContainer = () => {
 
   const [products, setProducts] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
   const { id } = useParams()
 
 
   useEffect(() => {
     const promise = getItems()
-    promise.then(json => { setProducts(json) })
+    promise.then(json => setProducts(json))
 
-    //eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id, products])
+  }, [id])
 
   const getItems = () => {
 
     const promise = new Promise((resolve, reject) => {
+
       setTimeout(() => {
-        if (id) {
-          // eslint-disable-next-line eqeqeq
-          resolve(productos.filter(p => p.category == id))
-        } else {
-          resolve(productos)
-        }
-        setLoading(true)
-      }, 4000)
+        id ? resolve(productos.filter(p => p.categoryId == id)) : resolve(productos)
+        setIsLoading(false)
+      }, 2000)
+
     })
 
     return promise
@@ -41,7 +37,7 @@ const ItemListContainer = () => {
 
   return (
     <Container className="mt-5 itemListContainer">
-      <ItemList products={products} loading={loading} />
+      <ItemList products={products} isLoading={isLoading} />
     </Container>
   )
 }
