@@ -1,12 +1,16 @@
 import Col from "react-bootstrap/Col"
-import "./item.scss"
 import ItemCount from "../ItemCount/ItemCount"
 import { Link } from "react-router-dom"
+import { useContext } from "react"
+import { cartContext } from "../../context/cartContext"
+import "./item.scss"
 
 const Item = ({ products }) => {
 
-    const onAdd = () => {
+    const { addItem } = useContext(cartContext);
 
+    const onAdd = (quantity) => {
+        console.log("agregando");
     }
 
     const formatMoney = (num) => {
@@ -25,7 +29,7 @@ const Item = ({ products }) => {
                                 <Link to={`/item/${p.id}`} style={{ textDecoration: 'none' }}>
                                     <h2 className="item__name">{p.title}</h2>
                                 </Link>
-                                <ItemCount initial={1} stock={5} onAdd={onAdd} />
+                                <ItemCount id={p.id} initial={1} stock={5} onAdd={onAdd} />
                             </div>
                         </div>
                     </Col>)

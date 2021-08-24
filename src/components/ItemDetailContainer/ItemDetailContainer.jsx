@@ -1,42 +1,48 @@
 import { useState, useEffect } from "react"
 import Container from "react-bootstrap/Container"
 import ItemDetail from "../ItemDetail/ItemDetail"
-import "./itemDetailContainer.scss"
 import { useParams } from "react-router-dom"
-import data from "../../data/data"
 import Spinner from "react-bootstrap/Spinner"
+import { firestore } from "../../firebase/firebase"
+import "./itemDetailContainer.scss"
 
-const productos = data
+
 
 const ItemDetailContainer = () => {
 
     const [item, setItem] = useState([])
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const { id } = useParams()
 
     useEffect(() => {
 
-        const promise = new Promise((resolve, reject) => {
+        const db = firestore
 
-            setTimeout(() => {
-                // eslint-disable-next-line eqeqeq
-                resolve(productos.find(e => e.id == id))
-                setLoading(true)
-            }, 1000)
+        const collection = db.collection("productos")
 
+        const documento = collection.doc(id)
+
+        const query = documento.get()
+
+        query.then((doc) => {
+            const data = doc.data()
+            const data_final = { id, ...data }
+            setItem(data_final)
         })
 
-        promise.then((producto) => setItem(producto))
+        setItem(documento)
 
+        setTimeout(() => {
+            setLoading(false)
+        }, 1000)
 
-    }, [item, id]);
+    }, [id]);
 
     return (
         <Container className="itemDetailContainer">
-            {loading ? <ItemDetail item={item} /> :
-                <Spinner animation="border" role="status" variant="secondary">
-                    <span className="visually-hidden">Loading...</span>
-                </Spinner>}
+            {loading ? <Spinner animation="border" role="status" variant="secondary">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner> : <ItemDetail item={item} />}
         </Container>
     )
 }
