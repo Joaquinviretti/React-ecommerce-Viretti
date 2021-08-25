@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./ItemCount.scss"
 
-const ItemCount = ({ stock, initial, id, onAdd }) => {
+const ItemCount = ({ stock, initial, onAdd, item }) => {
 
     const [counter, setCounter] = useState(initial)
 
@@ -20,7 +20,7 @@ const ItemCount = ({ stock, initial, id, onAdd }) => {
     }
 
     const addToCart = (e) => {
-            onAdd(counter) 
+            onAdd(counter, item) 
     }
 
     return (

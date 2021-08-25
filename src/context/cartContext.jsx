@@ -7,9 +7,7 @@ export const CustomProvider = ({ defaultValue = [], children }) => {
 
     const [cart, setCart] = useState(defaultValue)
 
-    /* add */
     const addItem = (item, quantity) => {
-        //si ya está en el carrito, lo busco y le sumo la cantidad
         if (isInCart(item.id)) {
 
             const newCart = [...cart]
@@ -25,26 +23,32 @@ export const CustomProvider = ({ defaultValue = [], children }) => {
         }
     }
 
-    /* is in cart */
     const isInCart = (id) => {
         return cart.find(p => p.item.id === id)
     }
 
-    /* remove  */
     const removeItem = (id) => {
-        console.log(id);
-        const newCart = [...cart].filter(p => p.item.id != id)
+        const newCart = [...cart].filter(p => p.item.id !== id)
         setCart(newCart)
-
     }
 
-    /* clear */
     const clear = () => {
         setCart([])
     }
 
+    const getTotal = () => {
+
+        let total = 0;
+        if (cart.length > 0) {
+            cart.forEach((p) => {
+                total = total + p.item.price * p.quantity;
+            })
+        }
+        return total;
+    }
+
     return (
-        <Provider value={{ cart, addItem, removeItem }}>
+        <Provider value={{ cart, addItem, removeItem, getTotal, clear }}>
             {children}
         </Provider>
     )

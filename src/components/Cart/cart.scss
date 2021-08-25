@@ -1,4 +1,5 @@
 .cartSection {
+    min-height: 100vh;
     padding-top: 5rem;
     .cartItem {
         height: 5rem;
@@ -59,6 +60,18 @@
         }
 
     }
+        .cartSection__checkout {
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            font: inherit;
+            margin-top: 1rem;
+            cursor: pointer;
+            outline: inherit;
+        }
+    
 }
 
 .cartEmptyMessage {

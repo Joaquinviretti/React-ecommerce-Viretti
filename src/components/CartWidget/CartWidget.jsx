@@ -17,7 +17,6 @@ const CartWidget = () => {
         }, 0)
 
         setItemsInCart(sum)
-        console.log(cart);
 
     }, [cart]);
 

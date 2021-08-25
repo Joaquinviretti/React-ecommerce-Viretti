@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer"
 import {CustomProvider} from "./context/cartContext"
 import "./style/main.scss"
 import Cart from "./components/Cart/Cart"
+import Checkout from "./components/Checkout/Checkout"
 
 const App = () =>
     <CustomProvider>
@@ -17,6 +18,7 @@ const App = () =>
                 <Route path="/item/:id">
                     <ItemDetailContainer />
                 </Route>
+                <Route path="/checkout" component={Checkout}/>
                 <Route path="/cart" component={Cart}/>
             </Switch>
             <Footer />

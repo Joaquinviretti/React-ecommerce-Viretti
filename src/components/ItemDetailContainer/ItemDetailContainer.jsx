@@ -11,7 +11,7 @@ import "./itemDetailContainer.scss"
 const ItemDetailContainer = () => {
 
     const [item, setItem] = useState([])
-    const [loading, setLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(true)
     const { id } = useParams()
 
     useEffect(() => {
@@ -33,14 +33,14 @@ const ItemDetailContainer = () => {
         setItem(documento)
 
         setTimeout(() => {
-            setLoading(false)
+            setIsLoading(false)
         }, 1000)
 
     }, [id]);
 
     return (
         <Container className="itemDetailContainer">
-            {loading ? <Spinner animation="border" role="status" variant="secondary">
+            {isLoading ? <Spinner animation="border" role="status" variant="secondary">
                 <span className="visually-hidden">Loading...</span>
             </Spinner> : <ItemDetail item={item} />}
         </Container>

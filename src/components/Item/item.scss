@@ -1,6 +1,6 @@
 .itemContainer {
     background-color: white;
-    height: 22rem;
+    height: 20rem;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     padding: 1em;
     border-radius: 10px;
@@ -20,11 +20,25 @@
         margin-bottom: 0.5rem;
         .item__name {
             font-size: 1.3rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             color: black;
         }
         .item__price {
+            font-size: 1.5rem;
             margin-bottom: 1rem;
+        }
+        .item__detalle {
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+            height: 2rem;
+            width: 100%;
+            margin-top: 0.8rem;
         }
     }
 
