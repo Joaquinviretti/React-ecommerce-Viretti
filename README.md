@@ -4,7 +4,7 @@
 Tienda web creada con ReactJs que permite navegar entre diversos productos traídos desde Firebase, agregarlos a un carrito de compras y luego persistir esa misma orden en la misma base de datos.
 
 ## Visuals
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://i.ibb.co/82gVWKG/gif-proyecto.gif)
 
 
 ## Installation
