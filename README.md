@@ -21,13 +21,13 @@ Tienda web creada con ReactJs que permite navegar entre diversos productos traí
 > npm start
 
 ## Librerías
-### react
+### - react
 
-### react-router-dom
+### - react-router-dom
 
-### react-bootstrap
+### - react-bootstrap
 
-### react-bootstrap-icons
+### - react-bootstrap-icons
 
-### firebase
+### - firebase
 
