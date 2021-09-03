@@ -22,6 +22,7 @@ Tienda web creada con la librería de ReactJs que permite navegar entre diversos
 
 ## Libraries
 ### react
+_Librería de javascript desarrollada por Facebook_
 
 ### react-router-dom
 _Me permite manejar un ruteado dinámico de las distintas vistas._
