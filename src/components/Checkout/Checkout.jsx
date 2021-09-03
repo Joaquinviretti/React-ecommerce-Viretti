@@ -14,23 +14,28 @@ import { Link } from "react-router-dom"
 const Checkout = () => {
 
     const { cart, getTotal, clear } = useContext(cartContext)
-    const [userData, setUserData] = useState({})
+    const [userData, setUserData] = useState({ })
     const [isLoading, setIsLoading] = useState(false)
     const [total, setTotal] = useState(0)
     const [confirmationId, setConfirtmationId] = useState()
 
     useEffect(() => {
         setTotal(getTotal())
-    }, []);
+    }, [cart]);
 
-    function selectFewerProps(show) {
+    const selectFewerProps = (show) => {
         const { id, title, price } = show.item;
         const { quantity } = show;
         return { id, title, price, quantity };
     }
 
+    const validateData = (e) => {
+        console.log(e);
+    }
+
     const sendForm = (e) => {
         e.preventDefault()
+
         setIsLoading(true)
         const date = new Date()
 
@@ -43,12 +48,13 @@ const Checkout = () => {
 
         const db = firestore
         db.collection("pedidos").add(order)
-        .then(setIsLoading(false))
-        .then((docRef) => {
+            .then(setIsLoading(false))
+            .then((docRef) => {
                 setConfirtmationId(docRef.id)
-        })
-        .then(clear())
+            })
+            .then(clear()).then(setIsLoading(false))
     }
+
 
     return (
         <Container className="checkoutContainer pb-4">
@@ -80,6 +86,7 @@ const Checkout = () => {
                                         ...userData,
                                         userName: e.target.value
                                     })
+                                    validateData(e)
                                 }
                                 } required />
                             </Form.Group>
