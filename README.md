@@ -1,11 +1,32 @@
-# E-Commerce creado con ReactJs
+# WatchWorld | ReactJs E-Commerce
 
-<br>
+## Description
+Tienda web creada con ReactJs que permite navegar entre diversos productos traídos desde Firebase, agregarlos a un carrito de compras y luego persistir esa misma orden en la misma base de datos.
 
-Se obtiene la información desde el archivo data.js. De esta manera el código queda más limpio. El sitio permite filtrar por categorías. 
+## Visuals
 
-Si se hace click en el nombre de un producto, el sitio redirige al usuario al detalle del mismo.
 
-Por el momento los tiempos de espera de las promise son simulados a través de un setTimeout y se utiliza la animación de loading.
+## Installation
+### 1 - clonar el repositorio
+git clone https://github.com/Joaquinviretti/React-ecommerce-Viretti
 
-Librerías utilizadas aparte de las ya vistas : react-bootstrap, boostrap-icons.
+### 2 - inicializar npm
+npm init -y
+
+### 3 - instalar librerías y dependencias
+npm install
+
+### 3 - correr el proyecto
+npm start
+
+## Librerías
+### react
+
+### react-router-dom
+
+### react-bootstrap
+
+### react-bootstrap-icons
+
+### firebase
+
