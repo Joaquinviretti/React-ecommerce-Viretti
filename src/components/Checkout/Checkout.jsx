@@ -29,10 +29,6 @@ const Checkout = () => {
         return { id, title, price, quantity };
     }
 
-    const validateData = (e) => {
-        console.log(e);
-    }
-
     const sendForm = (e) => {
         e.preventDefault()
 
