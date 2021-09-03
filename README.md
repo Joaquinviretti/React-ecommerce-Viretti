@@ -8,16 +8,16 @@ Tienda web creada con ReactJs que permite navegar entre diversos productos traí
 
 ## Installation
 ### 1 - clonar el repositorio
-git clone https://github.com/Joaquinviretti/React-ecommerce-Viretti
+> git clone https://github.com/Joaquinviretti/React-ecommerce-Viretti
 
 ### 2 - inicializar npm
-npm init -y
+> npm init -y
 
 ### 3 - instalar librerías y dependencias
-npm install
+> npm install
 
 ### 3 - correr el proyecto
-npm start
+> npm start
 
 ## Librerías
 ### react
