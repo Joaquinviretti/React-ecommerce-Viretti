@@ -82,7 +82,6 @@ const Checkout = () => {
                                         ...userData,
                                         userName: e.target.value
                                     })
-                                    validateData(e)
                                 }
                                 } required />
                             </Form.Group>
