@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/React-ecommerce-Viretti/static/css/main.114904d0.chunk.css",
+    "main.js": "/React-ecommerce-Viretti/static/js/main.73fa561b.chunk.js",
+    "main.js.map": "/React-ecommerce-Viretti/static/js/main.73fa561b.chunk.js.map",
+    "runtime-main.js": "/React-ecommerce-Viretti/static/js/runtime-main.d7dc378a.js",
+    "runtime-main.js.map": "/React-ecommerce-Viretti/static/js/runtime-main.d7dc378a.js.map",
+    "static/js/2.147e0304.chunk.js": "/React-ecommerce-Viretti/static/js/2.147e0304.chunk.js",
+    "static/js/2.147e0304.chunk.js.map": "/React-ecommerce-Viretti/static/js/2.147e0304.chunk.js.map",
+    "index.html": "/React-ecommerce-Viretti/index.html",
+    "static/css/main.114904d0.chunk.css.map": "/React-ecommerce-Viretti/static/css/main.114904d0.chunk.css.map",
+    "static/js/2.147e0304.chunk.js.LICENSE.txt": "/React-ecommerce-Viretti/static/js/2.147e0304.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d7dc378a.js",
+    "static/js/2.147e0304.chunk.js",
+    "static/css/main.114904d0.chunk.css",
+    "static/js/main.73fa561b.chunk.js"
+  ]
+}
