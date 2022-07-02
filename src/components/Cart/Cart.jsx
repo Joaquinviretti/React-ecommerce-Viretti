@@ -26,7 +26,7 @@ const Cart = () => {
                         <Row key={p.item.id}>
                             <Col>
                                 <Row className="cartItem" key={p.item.id}>
-                                    <Col xs={2} className="cartItem__pictureUrl" style={{ backgroundImage: `url(/${p.item.pictureUrl})` }}></Col>
+                                    <Col xs={2} className="cartItem__pictureUrl" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/${p.item.pictureUrl})` }}></Col>
                                     <Col xs={2} className="cartItem__quantity"><span>{p.quantity}</span></Col>
                                     <Col className="cartItem__title"><p>{p.item.title}</p></Col>
                                     <Col xs={3} className="cartItem__price"><span>$ {p.item.price}</span></Col>
